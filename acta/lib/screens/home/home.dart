@@ -26,6 +26,7 @@ class Home extends StatelessWidget {
         : PlatformScaffold(
             appBar: customAppBar(
               context: context,
+              signOutButton: true,
               title: greeting() + ', ' + (FirebaseAuth.instance.currentUser!.displayName ?? ''),
               trailingCupertino: GestureDetector(
                 onTap: () {

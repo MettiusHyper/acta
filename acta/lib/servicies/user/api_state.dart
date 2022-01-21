@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ApiState with ChangeNotifier {
   ApiUser? current;
 
-  void updateUser(ApiUser newUser) {
+  void updateUser(ApiUser? newUser) {
     current = newUser;
     notifyListeners();
   }
