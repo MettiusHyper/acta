@@ -1,4 +1,4 @@
-import 'package:acta/servicies/user/api.dart';
+import 'package:acta/servicies/api.dart';
 import 'package:flutter/material.dart';
 
 class ApiState with ChangeNotifier {

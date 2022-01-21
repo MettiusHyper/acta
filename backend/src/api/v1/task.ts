@@ -3,7 +3,7 @@ import { validate, Joi } from 'express-validation';
 import { v4 as uuidv4 } from 'uuid';
 import collection from '../../config/mongo.js';
 import { ID_REGEX, parse, TOKEN_HEADER } from '../../utils/utils.js';
-import { errorHandling, getUserData, getUserDataFunc, JoiTask } from './utils.js';
+import { errorHandling, getUserData, getUser, JoiTask } from './utils.js';
 
 const task: Router = express.Router();
 
@@ -13,7 +13,7 @@ task.post(
 		headers: TOKEN_HEADER,
 		body: Joi.object(JoiTask).fork(Object.keys(JoiTask), (schema) => schema.required()),
 	}),
-	getUserDataFunc,
+	getUser,
 	async (req: Request, res: Response) => {
 		if (!res.headersSent) {
 			//generate task object
@@ -47,7 +47,7 @@ task.patch(
 		}),
 		body: Joi.object(JoiTask),
 	}),
-	getUserDataFunc,
+	getUser,
 	async (req: Request, res: Response) => {
 		//getting the modified elements of the task
 		let modifiedItems: { [index: string]: any } = {};
@@ -89,7 +89,7 @@ task.delete(
 			id: Joi.string().regex(ID_REGEX).required(),
 		}),
 	}),
-	getUserDataFunc,
+	getUser,
 	async (req: Request, res: Response) => {
 		//removing the task
 		let doc = await collection.updateOne({ _id: res.locals.user } as any, {

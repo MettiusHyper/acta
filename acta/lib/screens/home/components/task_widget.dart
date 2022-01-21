@@ -1,6 +1,6 @@
 import 'package:acta/components/custom_checkbox.dart';
 import 'package:acta/screens/task/task.dart';
-import 'package:acta/servicies/user/api.dart';
+import 'package:acta/servicies/api.dart';
 import 'package:acta/servicies/user/api_state.dart';
 import 'package:acta/servicies/utils.dart';
 import 'package:flutter/material.dart';

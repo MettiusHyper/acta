@@ -12,12 +12,11 @@ class LogIn extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage("assets/login_background.jpg"),
-            fit: BoxFit.fill,
-            colorFilter: Theme.of(context).brightness == Brightness.light
-                ? ColorFilter.mode(Colors.white.withOpacity(.45), BlendMode.lighten)
-                : ColorFilter.mode(Colors.black.withOpacity(.7), BlendMode.darken),
-          ),
+              image: const AssetImage("assets/login_background.jpg"),
+              fit: BoxFit.fill,
+              colorFilter: Theme.of(context).brightness == Brightness.light
+                  ? ColorFilter.mode(Colors.white.withOpacity(.8), BlendMode.dstATop)
+                  : ColorFilter.mode(Colors.white.withOpacity(.45), BlendMode.dstATop)),
         ),
         width: double.infinity,
         child: BackdropFilter(
