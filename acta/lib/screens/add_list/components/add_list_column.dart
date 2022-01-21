@@ -3,7 +3,6 @@ import 'package:acta/screens/add_list/components/list_color_input.dart';
 import 'package:acta/screens/add_list/components/list_state.dart';
 import 'package:acta/screens/add_task/components/title_input.dart';
 import 'package:acta/servicies/utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

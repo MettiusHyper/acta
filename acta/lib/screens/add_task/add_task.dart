@@ -3,7 +3,6 @@ import 'package:acta/screens/add_task/components/add_task_column.dart';
 import 'package:acta/screens/add_task/components/add_task_pop.dart';
 import 'package:acta/screens/add_task/components/task_state.dart';
 import 'package:acta/servicies/user/api_state.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:provider/provider.dart';

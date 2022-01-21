@@ -5,7 +5,6 @@ import 'package:acta/screens/add_task/components/task_state.dart';
 import 'package:acta/screens/add_task/components/time_input.dart';
 import 'package:acta/screens/add_task/components/title_input.dart';
 import 'package:acta/servicies/utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -18,7 +18,7 @@ export const getUserDataFunc = async (req: Request, res: Response, next: NextFun
 			_id: user,
 			default_list: listId,
 			tasks: [],
-			lists: [{ id: listId, name: 'main', color: 'ffffff', emoji: '😀' }],
+			lists: [{ id: listId, name: 'main', color: 'f8c15c', emoji: '😀' }],
 		};
 		await collection.insertOne(userData as any);
 		res.locals.userData = userData;
@@ -37,7 +37,7 @@ export const getUserData = async (user: string) => {
 			_id: user,
 			default_list: listId,
 			tasks: [],
-			lists: [{ id: listId, name: 'main', color: 'ffffff', emoji: '😀' }],
+			lists: [{ id: listId, name: 'main', color: 'f8c15c', emoji: '😀' }],
 		};
 		await collection.insertOne(userData as any);
 		return userData;

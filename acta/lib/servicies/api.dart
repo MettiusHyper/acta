@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:acta/servicies/utils.dart';
@@ -102,8 +100,6 @@ Future<ApiUser> userinfo() async {
 Future<ApiUser> addTask(ApiTask task) async {
   var response = await http.post(Uri.https(url, '/v1/task'),
       headers: {'token': await FirebaseAuth.instance.currentUser!.getIdToken()}, body: task.toJson());
-  print(task.toJson());
-  log(await FirebaseAuth.instance.currentUser!.getIdToken());
   return ApiUser.fromJson(convert.jsonDecode(response.body));
 }
 

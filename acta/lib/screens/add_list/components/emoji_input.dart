@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:acta/constants/emoji.dart';
 import 'package:acta/screens/add_list/components/list_state.dart';
 import 'package:flutter/material.dart';
