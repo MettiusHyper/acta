@@ -31,7 +31,7 @@ PlatformAppBar customAppBar(
               title,
               style: Theme.of(context).textTheme.headline1,
               softWrap: false,
-              overflow: TextOverflow.clip,
+              overflow: TextOverflow.fade,
             ),
           )
         : null,

@@ -1,18 +1,8 @@
-import 'package:acta/constants/emoji.dart';
+import 'package:acta/constants/emojis.dart';
 import 'package:acta/screens/add_list/components/list_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:provider/provider.dart';
-
-Map<String, IconData> emojiIcons = {
-  'smile': Icons.emoji_emotions_outlined,
-  'people': Icons.emoji_people_outlined,
-  'accessories': Icons.emoji_events_outlined,
-  'nature': Icons.emoji_nature_outlined,
-  'food': Icons.emoji_food_beverage_outlined,
-  'objects': Icons.emoji_objects_outlined,
-  'symbols': Icons.emoji_symbols_outlined,
-  'flags': Icons.emoji_flags_outlined
-};
 
 class EmojiInput extends StatefulWidget {
   const EmojiInput({Key? key}) : super(key: key);
@@ -26,26 +16,31 @@ class _EmojiInputState extends State<EmojiInput> {
   Widget build(BuildContext context) {
     final list = Provider.of<ListState>(context);
 
-    List<List<Widget>> emojisWidget = emojis.values
-        .map<List<Widget>>((entry) => entry.map<Widget>((String emoji) {
-              return GestureDetector(
-                onTap: () {
-                  list.update(newEmoji: emoji);
-                  Navigator.pop(context);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: Text(
-                    emoji,
-                    style: const TextStyle(fontFamily: 'EmojiOne', fontSize: 22),
-                  ),
+    List<Widget> generateEmojiPage(Map<String, String> emojiMap) {
+      List<Widget> returnList = [];
+      emojiMap.forEach((name, emoji) => returnList.add(Tooltip(
+            message: name,
+            child: GestureDetector(
+              onTap: () {
+                list.update(newEmoji: emoji);
+                Navigator.pop(context);
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8),
+                child: Text(
+                  emoji,
+                  style: const TextStyle(fontFamily: 'EmojiOne', fontSize: 22),
                 ),
-              );
-            }).toList())
-        .toList();
+              ),
+            ),
+          )));
+      return returnList;
+    }
 
     int emojiPageIndex = 0;
+    List<List<Widget>> emojisWidget = emojis.values.map<List<Widget>>((entry) => generateEmojiPage(entry)).toList();
     List<Widget> currentEmojis = emojisWidget[emojiPageIndex];
+    List<Widget> foundEmoji = [];
 
     return GestureDetector(
       onTap: () {
@@ -53,6 +48,18 @@ class _EmojiInputState extends State<EmojiInput> {
           context: context,
           builder: (BuildContext context) {
             return StatefulBuilder(builder: (context, setState) {
+              void searchEmoji(String key) {
+                if (key.isEmpty) {
+                  setState(() => foundEmoji = []);
+                } else {
+                  var validKeys = allEmojis.keys.where((name) => name.toLowerCase().contains(key.toLowerCase()));
+                  var validEmojis = {for (var key in validKeys) key: allEmojis[key]!};
+                  setState(() {
+                    foundEmoji = generateEmojiPage(validEmojis);
+                  });
+                }
+              }
+
               void updateCurrentEmojis(int index) {
                 setState(() {
                   emojiPageIndex = index;
@@ -84,13 +91,25 @@ class _EmojiInputState extends State<EmojiInput> {
                   child: Column(
                     children: [
                       Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: PlatformTextField(
+                          hintText: 'Search emoji',
+                          onChanged: (text) => {searchEmoji(text)},
+                          style: Theme.of(context).textTheme.bodyText1,
+                          cupertino: (_, __) =>
+                              CupertinoTextFieldData(decoration: const BoxDecoration(color: Colors.transparent)),
+                          material: (_, __) =>
+                              MaterialTextFieldData(decoration: const InputDecoration(border: InputBorder.none)),
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.all(5),
                         child: SizedBox(
                           height: 300,
                           width: 300,
                           child: GridView.count(
                             crossAxisCount: 8,
-                            children: currentEmojis,
+                            children: foundEmoji.isNotEmpty ? foundEmoji : currentEmojis,
                           ),
                         ),
                       ),
