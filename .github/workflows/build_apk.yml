@@ -1,14 +1,11 @@
 name: Builds Flutter apk
-uses: subosito/flutter-action@v2.2.0
-on:
-    push:
-        tags:
-            - '*'
+on: [push]
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+            - uses: subosito/flutter-action@v2.2.0
             - uses: actions/setup-java@v2
               with:
                   distribution: 'zulu'
@@ -16,8 +13,12 @@ jobs:
             - uses: subosito/flutter-action@v2
               with:
                   flutter-version: '2.8.1'
-            - run: flutter pub get
-            - run: flutter build apk --split-per-abi
+            - name: Get flutter dependencies
+              run: flutter pub get
+              working-directory: acta
+            - name: Build flutter apk
+              run: flutter build apk --split-per-abi
+              working-directory: acta
             - name: get version
               id: version
               uses: notiz-dev/github-action-json-property@release
@@ -27,6 +28,6 @@ jobs:
             - uses: ncipollo/release-action@v1
               with:
                   tag: ${{steps.version.outputs.prop}}
-                  artifacts: 'build/app/outputs/apk/release/app-armeabi-v7a-release.apk'
+                  artifacts: 'acta/build/app/outputs/apk/release/app-armeabi-v7a-release.apk'
                   body: ${{ github.event.commits[0].message }}
-                  token: ${{ secrets.RELEASES_TOKEN }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
