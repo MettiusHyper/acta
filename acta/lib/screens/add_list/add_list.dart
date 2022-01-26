@@ -21,7 +21,7 @@ class AddList extends StatelessWidget {
             backButton: true,
             trailingCupertino: GestureDetector(
               onTap: () async => addListAndPop(context),
-              child: const Icon(Icons.check, size: 25, color: Colors.blue),
+              child: const Icon(Icons.check, size: 26, color: Colors.blue),
             ),
           ),
           body: const SingleChildScrollView(

@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const AddTask()));
                 },
-                child: Icon(context.platformIcons.add, size: 25, color: Colors.blue),
+                child: const Icon(Icons.add, size: 26, color: Colors.blue),
               ),
             ),
             body: const HomeColumn(),

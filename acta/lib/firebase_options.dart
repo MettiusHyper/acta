@@ -41,8 +41,8 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBoKrh8JODkWddPRux6lgw8S1pPh65cQmI',
-    appId: '1:160945447343:android:412cdeb37621904c998f5a',
+    apiKey: 'AIzaSyCIdIfXOlOaisSLxjA-Id7LW27oFiAOTFs',
+    appId: '1:160945447343:android:cfdee4cb184ef694998f5a',
     messagingSenderId: '160945447343',
     projectId: 'to-do-back',
     databaseURL: 'https://to-do-back-default-rtdb.europe-west1.firebasedatabase.app',
@@ -50,14 +50,14 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD8N37vwyu8bRjQiyfL5dWirnWgVux5IQU',
-    appId: '1:160945447343:ios:e419daf7868eb065998f5a',
+    apiKey: 'AIzaSyDk8hlPLaWEBkddd6i_tdMt_rDZuMr2qfM',
+    appId: '1:160945447343:ios:8cb00640b802f1ca998f5a',
     messagingSenderId: '160945447343',
     projectId: 'to-do-back',
     databaseURL: 'https://to-do-back-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'to-do-back.appspot.com',
-    androidClientId: '160945447343-f0acj213848fc95ifhqphpnqrtjqtlq9.apps.googleusercontent.com',
-    iosClientId: '160945447343-ccbh78avtjvifiuh84qrqu5qpv25o7h7.apps.googleusercontent.com',
-    iosBundleId: 'com.acta.app',
+    androidClientId: '160945447343-ol4n08u0oat5nlsb79l48od0b15jl3ka.apps.googleusercontent.com',
+    iosClientId: '160945447343-ja5p5s00ph8ucvdl3j8k29d2j0em467g.apps.googleusercontent.com',
+    iosBundleId: 'com.example.acta',
   );
 }

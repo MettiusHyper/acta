@@ -35,7 +35,7 @@ class EditList extends StatelessWidget {
                   backButton: true,
                   trailingCupertino: GestureDetector(
                     onTap: () async => editListAndPop(context, editList.id),
-                    child: const Icon(Icons.check, size: 25, color: Colors.blue),
+                    child: const Icon(Icons.check, size: 26, color: Colors.blue),
                   ),
                 ),
                 body: const SingleChildScrollView(

@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>160945447343-ccbh78avtjvifiuh84qrqu5qpv25o7h7.apps.googleusercontent.com</string>
+	<string>160945447343-ja5p5s00ph8ucvdl3j8k29d2j0em467g.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.160945447343-ccbh78avtjvifiuh84qrqu5qpv25o7h7</string>
+	<string>com.googleusercontent.apps.160945447343-ja5p5s00ph8ucvdl3j8k29d2j0em467g</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>160945447343-bmk4kadtn86nl3elb64e8b41nme68qe1.apps.googleusercontent.com</string>
+	<string>160945447343-ol4n08u0oat5nlsb79l48od0b15jl3ka.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD8N37vwyu8bRjQiyfL5dWirnWgVux5IQU</string>
+	<string>AIzaSyDk8hlPLaWEBkddd6i_tdMt_rDZuMr2qfM</string>
 	<key>GCM_SENDER_ID</key>
 	<string>160945447343</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.acta.app</string>
+	<string>com.example.acta</string>
 	<key>PROJECT_ID</key>
 	<string>to-do-back</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:160945447343:ios:e419daf7868eb065998f5a</string>
+	<string>1:160945447343:ios:8cb00640b802f1ca998f5a</string>
 	<key>DATABASE_URL</key>
 	<string>https://to-do-back-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>

@@ -8,42 +8,34 @@
 	"client": [
 		{
 			"client_info": {
-				"mobilesdk_app_id": "1:160945447343:android:412cdeb37621904c998f5a",
+				"mobilesdk_app_id": "1:160945447343:android:cfdee4cb184ef694998f5a",
 				"android_client_info": {
 					"package_name": "com.example.acta"
 				}
 			},
 			"oauth_client": [
 				{
-					"client_id": "160945447343-bmk4kadtn86nl3elb64e8b41nme68qe1.apps.googleusercontent.com",
+					"client_id": "160945447343-ghmode422stcb2ktkc7uq05m4lm8h67j.apps.googleusercontent.com",
 					"client_type": 1,
 					"android_info": {
 						"package_name": "com.example.acta",
-						"certificate_hash": "efebf7eef4adba9d077fabd5f35918372b98f781"
+						"certificate_hash": "660ea580a499d0c68298535c1973b452ae1e6c1a"
 					}
-				},
-				{
-					"client_id": "160945447343-sm9gcvn5jp8h2m8h7r58839sg5u170sj.apps.googleusercontent.com",
-					"client_type": 3
 				}
 			],
 			"api_key": [
 				{
-					"current_key": "AIzaSyBoKrh8JODkWddPRux6lgw8S1pPh65cQmI"
+					"current_key": "AIzaSyCIdIfXOlOaisSLxjA-Id7LW27oFiAOTFs"
 				}
 			],
 			"services": {
 				"appinvite_service": {
 					"other_platform_oauth_client": [
 						{
-							"client_id": "160945447343-dhgatcqqh44drlfcs0fjeojkm867bv5d.apps.googleusercontent.com",
-							"client_type": 3
-						},
-						{
-							"client_id": "160945447343-7itfcoqe6qn1bfuslt301jpteh9jki9o.apps.googleusercontent.com",
+							"client_id": "160945447343-ccbh78avtjvifiuh84qrqu5qpv25o7h7.apps.googleusercontent.com",
 							"client_type": 2,
 							"ios_info": {
-								"bundle_id": "com.todo.app"
+								"bundle_id": "com.acta.app"
 							}
 						}
 					]

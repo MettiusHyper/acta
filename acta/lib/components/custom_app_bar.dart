@@ -17,7 +17,8 @@ PlatformAppBar customAppBar(
   return PlatformAppBar(
     leading: signOutButton
         ? GestureDetector(
-            child: Icon(Icons.logout_rounded, color: Platform.isIOS ? Colors.blue : null),
+            child: Icon(Icons.logout_rounded,
+                color: Platform.isIOS ? Colors.blue : Theme.of(context).textTheme.headline1!.color),
             onTap: () {
               FirebaseAuth.instance.signOut();
               user.updateUser(null);
@@ -50,8 +51,19 @@ PlatformAppBar customAppBar(
               )
             : null),
     cupertino: (_, __) => CupertinoNavigationBarData(
-      border: const Border(bottom: BorderSide(color: Colors.transparent)),
-      trailing: trailingCupertino,
-    ),
+        border: const Border(bottom: BorderSide(color: Colors.transparent)),
+        trailing: trailingCupertino,
+        leading: backButton
+            ? GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.blue,
+                  size: 26,
+                ),
+              )
+            : null),
   );
 }
