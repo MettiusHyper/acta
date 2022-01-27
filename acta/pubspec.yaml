@@ -33,6 +33,10 @@ flutter:
     uses-material-design: true
     assets:
         - assets/
+    fonts:
+        - family: ActaIcons
+          fonts:
+              - asset: assets/fonts/ActaIcons.ttf
 
 flutter_icons:
     remove_alpha_ios: true
