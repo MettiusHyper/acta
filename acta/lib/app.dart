@@ -1,6 +1,6 @@
 import 'package:acta/constants/themes.dart';
 import 'package:acta/to_do/servicies/user/api_state.dart';
-import 'package:acta/to_do/servicies/wrapper.dart';
+import 'package:acta/wrapper/wrapper.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

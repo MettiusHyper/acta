@@ -15,7 +15,7 @@ class BottomAppbarWrapper extends StatefulWidget {
 class _BottomAppbarWrapperState extends State<BottomAppbarWrapper> {
   List<Widget> pages = [
     const Home(),
-    const LogIn(),
+    PlatformScaffold(),
   ];
   int currentIndex = 0;
 
