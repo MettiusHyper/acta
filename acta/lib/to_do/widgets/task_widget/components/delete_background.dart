@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: implementation_imports
 import 'package:flutter_platform_widgets/src/platform_icons.dart';
 
 class DeleteBackground extends StatelessWidget {

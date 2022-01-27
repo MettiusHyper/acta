@@ -1,5 +1,5 @@
-import 'package:acta/to_do/screens/home/home.dart';
 import 'package:acta/to_do/screens/login/login.dart';
+import 'package:acta/to_do/servicies/bottom_appbar_wrapper.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +14,7 @@ class Wrapper extends StatelessWidget {
     if (user == null) {
       return const LogIn();
     } else {
-      return const Home();
+      return const BottomAppbarWrapper();
     }
   }
 }
