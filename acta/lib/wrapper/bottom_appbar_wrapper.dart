@@ -1,8 +1,8 @@
 import 'dart:io';
 
+import 'package:acta/account/account.dart';
 import 'package:acta/constants/acta_icons_icons.dart';
 import 'package:acta/to_do/screens/home/home.dart';
-import 'package:acta/to_do/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
@@ -15,7 +15,7 @@ class BottomAppbarWrapper extends StatefulWidget {
 class _BottomAppbarWrapperState extends State<BottomAppbarWrapper> {
   List<Widget> pages = [
     const Home(),
-    PlatformScaffold(),
+    const Account(),
   ];
   int currentIndex = 0;
 

@@ -1,6 +1,6 @@
 {
 	"name": "acta",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "A productivity app, with many tools contained in a single package.",
 	"scripts": {
 		"start": "cd backend/ && npm start"
