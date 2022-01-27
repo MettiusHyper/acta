@@ -1,4 +1,4 @@
-import 'package:acta/servicies/api.dart';
+import 'package:acta/servicies/api/models.dart';
 import 'package:flutter/material.dart';
 
 class ListState with ChangeNotifier {

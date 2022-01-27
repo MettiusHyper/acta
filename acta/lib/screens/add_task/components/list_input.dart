@@ -1,6 +1,6 @@
 import 'package:acta/screens/add_list/add_list.dart';
 import 'package:acta/screens/add_task/components/task_state.dart';
-import 'package:acta/servicies/api.dart';
+import 'package:acta/servicies/api/models.dart';
 import 'package:acta/servicies/user/api_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';

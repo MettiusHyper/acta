@@ -2,7 +2,7 @@ import 'package:acta/components/custom_app_bar.dart';
 import 'package:acta/screens/add_list/components/add_list_column.dart';
 import 'package:acta/screens/add_list/components/list_state.dart';
 import 'package:acta/screens/edit_list/components/edit_list_pop.dart';
-import 'package:acta/servicies/api.dart';
+import 'package:acta/servicies/api/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:provider/provider.dart';

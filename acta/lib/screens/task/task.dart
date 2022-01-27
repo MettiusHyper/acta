@@ -2,7 +2,7 @@ import 'package:acta/components/custom_app_bar.dart';
 import 'package:acta/screens/add_task/components/add_task_column.dart';
 import 'package:acta/screens/add_task/components/task_state.dart';
 import 'package:acta/screens/task/componets/edit_task_pop.dart';
-import 'package:acta/servicies/api.dart';
+import 'package:acta/servicies/api/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:provider/provider.dart';
