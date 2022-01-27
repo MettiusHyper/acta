@@ -26,13 +26,12 @@ class Home extends StatelessWidget {
         : PlatformScaffold(
             appBar: customAppBar(
               context: context,
-              signOutButton: true,
               title: greeting() + ', ' + (FirebaseAuth.instance.currentUser!.displayName ?? ''),
               trailingCupertino: GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const AddTask()));
                 },
-                child: const Icon(Icons.add, size: 26, color: Colors.blue),
+                child: Icon(context.platformIcons.add, size: 26, color: Colors.blue),
               ),
             ),
             body: const HomeColumn(),
@@ -42,7 +41,7 @@ class Home extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const AddTask()));
                 },
                 backgroundColor: Theme.of(context).primaryColor,
-                child: const Icon(Icons.add, color: Colors.white),
+                child: Icon(context.platformIcons.add, color: Colors.white),
               ),
             ),
           );

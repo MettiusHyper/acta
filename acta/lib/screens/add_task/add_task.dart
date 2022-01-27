@@ -44,7 +44,7 @@ class AddTask extends StatelessWidget {
                   floatingActionButton: FloatingActionButton(
                     onPressed: () async => addTaskAndPop(context),
                     backgroundColor: Theme.of(context).primaryColor,
-                    child: const Icon(Icons.check, color: Colors.white),
+                    child: Icon(context.platformIcons.checkMark, color: Colors.white),
                   ),
                 ),
               );

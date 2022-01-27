@@ -1,30 +1,9 @@
-import 'dart:io';
-
-import 'package:acta/servicies/user/api_state.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:provider/provider.dart';
 
 PlatformAppBar customAppBar(
-    {required BuildContext context,
-    String? title,
-    Widget? trailingCupertino,
-    bool backButton = false,
-    bool signOutButton = false}) {
-  final user = Provider.of<ApiState>(context);
-
+    {required BuildContext context, String? title, Widget? trailingCupertino, bool backButton = false}) {
   return PlatformAppBar(
-    leading: signOutButton
-        ? GestureDetector(
-            child: Icon(Icons.logout_rounded,
-                color: Platform.isIOS ? Colors.blue : Theme.of(context).textTheme.headline1!.color),
-            onTap: () {
-              FirebaseAuth.instance.signOut();
-              user.updateUser(null);
-            },
-          )
-        : null,
     title: title != null
         ? FractionallySizedBox(
             widthFactor: 0.95,
@@ -45,7 +24,7 @@ PlatformAppBar customAppBar(
                   Navigator.pop(context);
                 },
                 child: Icon(
-                  Icons.arrow_back,
+                  context.platformIcons.back,
                   color: Theme.of(context).textTheme.bodyText1!.color,
                 ),
               )
@@ -58,8 +37,8 @@ PlatformAppBar customAppBar(
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: const Icon(
-                  Icons.arrow_back_ios,
+                child: Icon(
+                  context.platformIcons.back,
                   color: Colors.blue,
                   size: 26,
                 ),
