@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:acta/screens/home/components/list_widget.dart';
-import 'package:acta/screens/home/components/task_widget.dart';
+import 'package:acta/widgets/list_widget/list_widget.dart';
+import 'package:acta/widgets/task_widget/task_widget.dart';
 import 'package:acta/servicies/user/api_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
